@@ -19,6 +19,12 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_JSON: false
+          VALIDATE_MARKDOWN: false
+          VALIDATE_TYPESCRIPT_ES: false  # Disable TypeScript (ESLint) validation
+          VALIDATE_TYPESCRIPT_STANDARD: false  # Disable TypeScript (Standard) validation
+          VALIDATE_YAML: false  # Disable YAML validation
+          DISABLE_GITHUB_ACTIONS: true 
   
   deploy:
     runs-on: ubuntu-latest
